@@ -7,9 +7,7 @@
 #include <fstream>
 #include <iostream>
 
-// vendor
-#include "glm/glm.hpp"
-
 // src
+#include "math/math.h"
 #include "util/logger/logger.h"
 #include "util/util.h"

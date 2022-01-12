@@ -7,13 +7,13 @@ const int width = 256;
 const int height = 256;
 const int channels = 3;
 
-typedef unsigned char byte;
+using namespace Wave;
 
 byte pixels[width * height * channels];
 
 int main()
 {
-    Wave::Log::Init();
+    Log::Init();
 
     int index = 0;
     for (int j = height - 1; j >= 0; --j)
@@ -36,6 +36,6 @@ int main()
 
     stbi_write_png("image.png", width, height, channels, pixels, 0);
 
-    Wave::Log::Shutdown();
+    Log::Shutdown();
 	return 0;
 }
