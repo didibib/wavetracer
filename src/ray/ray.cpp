@@ -3,5 +3,5 @@
 
 namespace Wave
 {
-	using Vec3 = glm::vec3;
+	
 }
