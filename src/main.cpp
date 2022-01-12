@@ -1,5 +1,8 @@
 #pragma once
 #include "pch/wavepch.h"
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "stb_image_write.h"
+
 
 int main()
 {
@@ -7,7 +10,9 @@ int main()
 	const int height = 256;
     const int channels = 3;
 
-    int* pixels = new int[width * height * channels];
+    typedef unsigned char byte;
+
+    byte pixels[width * height * channels];
 
     int index = 0;
     for (int j = height - 1; j >= 0; --j)
@@ -18,9 +23,9 @@ int main()
             auto g = double(j) / (height - 1);
             auto b = 0.25;
 
-            int ir = static_cast<int>(255.999 * r);
-            int ig = static_cast<int>(255.999 * g);
-            int ib = static_cast<int>(255.999 * b);
+            byte ir = static_cast<byte>(255.999 * r);
+            byte ig = static_cast<byte>(255.999 * g);
+            byte ib = static_cast<byte>(255.999 * b);
 
             pixels[index++] = ir;
             pixels[index++] = ig;
@@ -28,8 +33,7 @@ int main()
         }
     }
 
-    //stbi_write_png("image.png", width, height, channels, pixels, width * channels);
-
+    stbi_write_png("image.png", width, height, channels, pixels, 0);
 
 	return 0;
 }
