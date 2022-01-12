@@ -3,16 +3,17 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
 
+const int width = 256;
+const int height = 256;
+const int channels = 3;
+
+typedef unsigned char byte;
+
+byte pixels[width * height * channels];
 
 int main()
 {
-	const int width = 256;
-	const int height = 256;
-    const int channels = 3;
-
-    typedef unsigned char byte;
-
-    byte pixels[width * height * channels];
+    Wave::Log::Init();
 
     int index = 0;
     for (int j = height - 1; j >= 0; --j)
@@ -35,5 +36,6 @@ int main()
 
     stbi_write_png("image.png", width, height, channels, pixels, 0);
 
+    Wave::Log::Shutdown();
 	return 0;
 }

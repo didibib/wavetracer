@@ -6,6 +6,8 @@ set(WAVE_SOURCE_LIST
     ${WAVE_PCH_CPP} 
     "${STB}/stb_image_write.h"
     "util/util.h"
+    "util/logger/logger.h"
+    "util/logger/logger.cpp"
     "main.cpp"
 )
 

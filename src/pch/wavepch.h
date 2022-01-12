@@ -11,4 +11,5 @@
 #include "glm/glm.hpp"
 
 // src
+#include "util/logger/logger.h"
 #include "util/util.h"
