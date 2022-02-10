@@ -16,7 +16,7 @@ namespace Wave
 		auto logger = spdlog::stdout_color_mt("console");
 		logger->set_level(spdlog::level::trace);
 		spdlog::set_default_logger(logger);
-		ERROR("spdlog initialized");
+		DEBUG("spdlog initialized");
 	}
 
 	void Log::Shutdown()

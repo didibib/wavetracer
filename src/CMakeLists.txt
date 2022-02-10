@@ -6,11 +6,13 @@ set(WAVE_SOURCE_LIST
     ${WAVE_PCH_CPP} 
     "${STB}/stb_image_write.h"
     "math/math.h"
-    "ray/ray.h"
-    "ray/ray.cpp"
+    "objects/camera.h"
+    "objects/camera.cpp"
+    "objects/ray.h"
+    "objects/ray.cpp"
     "util/util.h"
-    "util/logger/logger.h"
-    "util/logger/logger.cpp"
+    "util/logger.h"
+    "util/logger.cpp"
     "main.cpp"
 )
 

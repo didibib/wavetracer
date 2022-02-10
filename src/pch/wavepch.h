@@ -9,5 +9,8 @@
 
 // src
 #include "math/math.h"
-#include "util/logger/logger.h"
+#include "util/logger.h"
 #include "util/util.h"
+
+#include "objects/camera.h"
+#include "objects/ray.h"

@@ -13,11 +13,8 @@ namespace Wave
 
 		Vec3 Origin() const { return mOrigin; }
 		Vec3 Direction() const { return mDirection; }
-
-		Vec3 At(float time)
-		{
-			return mOrigin + time * mDirection;
-		}
+		Color GetColor();
+		Vec3 At(float time) { return mOrigin + time * mDirection; }
 
 	private:
 		Vec3 mOrigin;
